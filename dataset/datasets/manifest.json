@@ -1,0 +1,43 @@
+{
+  "name": "MisVisAgentBench Datasets",
+  "version": "misvisagentbench-datasets-v1.1.0",
+  "schema_version": 1,
+  "task_pairs": 10,
+  "task_instances": 20,
+  "conditions": [
+    "clean",
+    "misleading"
+  ],
+  "tasks": [
+    {
+      "task_id": "demo_001"
+    },
+    {
+      "task_id": "demo_002"
+    },
+    {
+      "task_id": "demo_003"
+    },
+    {
+      "task_id": "demo_004"
+    },
+    {
+      "task_id": "demo_005"
+    },
+    {
+      "task_id": "demo_006"
+    },
+    {
+      "task_id": "demo_007"
+    },
+    {
+      "task_id": "demo_008"
+    },
+    {
+      "task_id": "demo_009"
+    },
+    {
+      "task_id": "demo_010"
+    }
+  ]
+}

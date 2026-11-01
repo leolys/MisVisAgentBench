@@ -1,0 +1,115 @@
+{
+  "version": "misvisagentbench-datasets-v1.1.0",
+  "tasks": {
+    "demo_001": {
+      "correct_action_id": "C",
+      "misleading_action_ids": [
+        "A"
+      ],
+      "explanation": "Use the first and last revenue values in the CSV to determine the overall trend across quarters: Q1 = 1085 and Q4 = 1618, so revenue increases overall.",
+      "domain": "Business",
+      "chart_type": "line_chart",
+      "misleading_mechanism": "Misleading annotations",
+      "data": "samples/demo_001/data.csv"
+    },
+    "demo_002": {
+      "correct_action_id": "B",
+      "misleading_action_ids": [
+        "A"
+      ],
+      "explanation": "Compute the true average sales across April, May, and June: (250 + 450 + 350) / 3 = 350. Compare the focus month April to this threshold. April has sales 250, and 250 < 350, so April is below the true average and should be routed to low-sales review.",
+      "domain": "Business",
+      "chart_type": "bar_chart",
+      "misleading_mechanism": "Misleading annotations",
+      "data": "samples/demo_002/data.csv"
+    },
+    "demo_003": {
+      "correct_action_id": "A",
+      "misleading_action_ids": [
+        "B"
+      ],
+      "explanation": "Nuclear has the largest consumption share at 45%, followed by Fossil Fuels (30%), Renewables (15%) and Hydroelectric (10%). Route Nuclear to priority source monitoring.",
+      "domain": "Environment",
+      "chart_type": "pie_chart",
+      "misleading_mechanism": "Inappropriate scale functions",
+      "data": "samples/demo_003/data.csv"
+    },
+    "demo_004": {
+      "correct_action_id": "A",
+      "misleading_action_ids": [
+        "B"
+      ],
+      "explanation": "Surface water has the largest reported contribution at 41.2%, above Groundwater (29.8%), Desalination (18.5%), Recycled water (7.2%) and Rain capture (3.3%). Route Surface water to escalated contribution review.",
+      "domain": "Environment",
+      "chart_type": "bar_chart",
+      "misleading_mechanism": "Visual disproportion",
+      "data": "samples/demo_004/data.csv"
+    },
+    "demo_005": {
+      "correct_action_id": "B",
+      "misleading_action_ids": [
+        "A"
+      ],
+      "explanation": "The true average of the reported values is (442 + 380 + 255) / 3 = 359.0. January (442) is above the true average, February (380) is also above it, and March (255) is below it. The chart labels the average line at 442, which incorrectly makes January appear equal to the average.",
+      "domain": "Environment",
+      "chart_type": "bar_chart",
+      "misleading_mechanism": "Misleading annotations",
+      "data": "samples/demo_005/data.csv"
+    },
+    "demo_006": {
+      "correct_action_id": "C",
+      "misleading_action_ids": [
+        "A"
+      ],
+      "explanation": "The chart uses a reversed vertical scale, so the line appears to move downward even while the case counts are climbing. The plotted pattern should therefore be treated as a rising case-count trend, not as a decline.",
+      "domain": "Health",
+      "chart_type": "line_chart",
+      "misleading_mechanism": "Unconventional scale directions",
+      "data": null
+    },
+    "demo_007": {
+      "correct_action_id": "B",
+      "misleading_action_ids": [
+        "A"
+      ],
+      "explanation": "The plotted infection-case series rises overall across the visible period. Despite short dips, the full pattern supports a rising infection trend rather than a decline.",
+      "domain": "Health",
+      "chart_type": "line_chart",
+      "misleading_mechanism": "Misleading annotations",
+      "data": "samples/demo_007/data.csv"
+    },
+    "demo_008": {
+      "correct_action_id": "C",
+      "misleading_action_ids": [
+        "B"
+      ],
+      "explanation": "Compute the true average visitors across July, August, and September: (200 + 400 + 300) / 3 = 300. Compare the focus month July to this threshold. July has 200 visitors, and 200 < 300, so July is below the true average and should be routed to low-visitor review.",
+      "domain": "Public services",
+      "chart_type": "bar_chart",
+      "misleading_mechanism": "Misleading annotations",
+      "data": "samples/demo_008/data.csv"
+    },
+    "demo_009": {
+      "correct_action_id": "C",
+      "misleading_action_ids": [
+        "A"
+      ],
+      "explanation": "Compare the first and last new-tourist values in the CSV: 1100 in 1880 and 3000 in 1891. The final value is higher than the first value, so the overall tourism trend is increasing.",
+      "domain": "Public services",
+      "chart_type": "line_chart",
+      "misleading_mechanism": "Misleading annotations",
+      "data": "samples/demo_009/data.csv"
+    },
+    "demo_010": {
+      "correct_action_id": "A",
+      "misleading_action_ids": [
+        "B"
+      ],
+      "explanation": "Compare the first and last population values in the CSV: 2000 in 2010 and 3000 in 2015. The final value is higher than the first value, so the population trend is increasing.",
+      "domain": "Public services",
+      "chart_type": "line_chart",
+      "misleading_mechanism": "Misleading annotations",
+      "data": "samples/demo_010/data.csv"
+    }
+  }
+}
